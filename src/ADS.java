@@ -34,8 +34,8 @@ public class ADS{
 
     public static double printAvarage(int n) {
         int sum = 0;
-        int sz = n;
-        return printAvarage(n, sum , sz);
+        int z = n;
+        return printAvarage(n, sum , z);
     }
     public static void task2() { // complexity O(n)
         int n = sc.nextInt();
