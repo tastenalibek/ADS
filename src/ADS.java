@@ -113,7 +113,7 @@ public class ADS{
         sp.setCharAt(j, str.charAt(i));
         return sp.toString();
     }
-    private static void allPermutationsOfString(String s , int i) {
+    private static void allPerm(String s , int i) {
         if(i == s.length()){
             System.out.println(s);
             return;
@@ -121,18 +121,18 @@ public class ADS{
 
         for(int j=i;j<s.length();j++){
             s = swap(s, i, j);
-            allPermutationsOfString(s, i+1);
+            allPerm(s, i+1);
             s = swap(s, i, j);
         }
 
     }
 
-    public static void allPermutationsOfString(String s) {
-        allPermutationsOfString(s, 0);
+    public static void allPerm(String s) {
+        allPerm(s, 0);
     }
     public static void task7() {//complexity O(n!)
         String s = sc.next();
-        allPermutationsOfString(s);
+        allPerm(s);
     }
 
     private static boolean Digits(String s , int i){
